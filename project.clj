@@ -25,4 +25,5 @@
                                    :optimizations :none
                                    :source-map true}}]}
   :resource-paths ["resources"]
+  :test-paths ["test"]
   :main numenera.server)

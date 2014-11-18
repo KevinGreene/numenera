@@ -1,7 +1,8 @@
 (ns numenera.character-test
-  (:require [numenera.character :as character]))
+  (:require [clojure.test :refer :all]
+            [numenera.character :as character]))
 
-(testing "parse-int"
+(deftest parse-int-test
   (testing "with int"
     (is (= (character/parse-int 5) 5))
     )
