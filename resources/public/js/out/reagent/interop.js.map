@@ -1,7 +1,0 @@
-{"version":3,
- "file":
- "/Users/kevin/programming/numenera-clj/resources/public/js/out/reagent/interop.js",
- "sources":["interop.cljs"],
- "lineCount":6,
- "mappings":";AAAA;;AAEA,wBAAA,xBAAKA",
- "names":["reagent.interop/fvars"]}
