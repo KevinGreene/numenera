@@ -39,7 +39,7 @@
   []
   [:div
    "Type your desired name: "
-   [:input {:type "text" :value @characterName
+   [:input {:type "text" :value @characterName :class "character-name-input"
             :on-change #(reset! characterName  (-> % .-target .-value))}]])
 
 (defn character-component

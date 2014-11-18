@@ -15,7 +15,8 @@
   :preamble ["reagent/react.js"]
   :plugins [[lein-cljsbuild "1.0.1"]
             [lein-ring "0.8.7"]
-            [lein-pdo "0.1.1"]]
+            [lein-pdo "0.1.1"]
+            [lein-less "1.7.2"]]
   :aliases {"up" ["pdo" "cljsbuild" "auto" "dev," "ring" "server-headless"]}
   :source-paths ["src/clj"]
   :cljsbuild {:builds [{:id "dev"
@@ -26,4 +27,6 @@
                                    :source-map true}}]}
   :resource-paths ["resources"]
   :test-paths ["test"]
+  :less {:source-paths ["src/less"]
+         :target-path "resources/public/css"}
   :main numenera.server)
