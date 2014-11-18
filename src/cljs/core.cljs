@@ -31,8 +31,7 @@
 (defn refresh-character-component
   []
   [:div
-   "Refresh characters: "
-   [:input {:type "button" :value "Click me!"
+   [:input {:type "button" :value "Refresh Characters!" :class "button"
             :on-click #(fetch-characters)}]])
 
 (defn character-name-input-component
@@ -56,9 +55,8 @@
 
 (defn fetch-characters
   []
-  (let [c (chan)]
-    (go (let [{characters :body} (<! (http/get "/api/characters/random/5"))]
-          (reset! characterList characters)))))
+  (go (let [{characters :body} (<! (http/get "/api/characters/random/5"))]
+        (reset! characterList characters))))
 
 (defn character-box
   []

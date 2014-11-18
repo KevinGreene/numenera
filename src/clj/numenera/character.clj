@@ -4,7 +4,7 @@
   )
 
 (defrecord NumeneraCharacter
-  [character-type
+  [type
    focus
    descriptor
    ])
