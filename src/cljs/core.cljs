@@ -44,7 +44,8 @@
 
 (defn character-component
   [characterName character]
-  [:li (getCharacterString characterName character)])
+  (let [characterString (getCharacterString characterName character)]
+    ^{:key characterString} [:li characterString]))
 
 (defn character-list
   [characterName characters]
